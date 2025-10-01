@@ -7,6 +7,7 @@ export default function Portfolio() {
   const [dark, setDark] = useState(false);
   const [text, setText] = useState('');
   const [idx, setIdx] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const lines = [
     "I Have Experience in Python, MLOps, AWS and More",
@@ -75,18 +76,18 @@ export default function Portfolio() {
         `}</style>
         
         <nav className={`fixed w-full z-50 transition-all ${scroll ? 'bg-white dark:bg-gray-900 shadow' : 'bg-gray-100 dark:bg-gray-900'}`}>
-          <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
-            <div className="flex items-center space-x-3">
-              <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-2xl">P</span>
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 py-5 flex justify-between items-center">
+            <div className="flex items-center space-x-2 sm:space-x-3">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 bg-blue-600 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-lg sm:text-2xl">P</span>
               </div>
               <div>
-                <div className="font-bold text-lg">Praneeth</div>
-                <div className="text-sm text-gray-500">Sai Chunchu</div>
+                <div className="font-bold text-sm sm:text-lg">Praneeth</div>
+                <div className="text-xs sm:text-sm text-gray-500">Sai Chunchu</div>
               </div>
             </div>
             
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden lg:flex space-x-8">
               <button onClick={() => scrollToSection('home')} className="hover:text-gray-600 transition">Home</button>
               <button onClick={() => scrollToSection('about')} className="hover:text-gray-600 transition">About Me</button>
               <button onClick={() => scrollToSection('strengths')} className="hover:text-gray-600 transition">Strengths</button>
@@ -95,21 +96,39 @@ export default function Portfolio() {
               <button onClick={() => scrollToSection('certs')} className="hover:text-gray-600 transition">Certifications</button>
             </div>
             
-            <div className="flex space-x-4">
-  <button onClick={() => scrollToSection('contact')} className="bg-black dark:bg-white dark:text-black text-white px-7 py-3 rounded-full">Contact Me</button>
-  <a 
-    href="/resume.pdf" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="bg-black dark:bg-white dark:text-black text-white px-7 py-3 rounded-full inline-block"
-  >
-    Resume
-  </a>
-  <button onClick={() => setDark(!dark)} className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-    {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-  </button>
-</div>
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <button onClick={() => scrollToSection('contact')} className="hidden sm:block bg-black dark:bg-white dark:text-black text-white px-4 sm:px-7 py-2 sm:py-3 rounded-full text-sm sm:text-base">Contact</button>
+              <a 
+                href="/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-black dark:bg-white dark:text-black text-white px-4 sm:px-7 py-2 sm:py-3 rounded-full text-sm sm:text-base"
+              >
+                Resume
+              </a>
+              <button onClick={() => setDark(!dark)} className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                {dark ? <Sun className="w-4 h-4 sm:w-5 sm:h-5" /> : <Moon className="w-4 h-4 sm:w-5 sm:h-5" />}
+              </button>
+              <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden w-10 h-10 flex flex-col items-center justify-center space-y-1">
+                <span className="w-6 h-0.5 bg-gray-900 dark:bg-white transition"></span>
+                <span className="w-6 h-0.5 bg-gray-900 dark:bg-white transition"></span>
+                <span className="w-6 h-0.5 bg-gray-900 dark:bg-white transition"></span>
+              </button>
+            </div>
           </div>
+          
+          {menuOpen && (
+            <div className="lg:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+              <div className="flex flex-col px-4 py-2">
+                <button onClick={() => { scrollToSection('home'); setMenuOpen(false); }} className="py-3 text-left hover:text-blue-600">Home</button>
+                <button onClick={() => { scrollToSection('about'); setMenuOpen(false); }} className="py-3 text-left hover:text-blue-600">About Me</button>
+                <button onClick={() => { scrollToSection('strengths'); setMenuOpen(false); }} className="py-3 text-left hover:text-blue-600">Strengths</button>
+                <button onClick={() => { scrollToSection('exp'); setMenuOpen(false); }} className="py-3 text-left hover:text-blue-600">Experience</button>
+                <button onClick={() => { scrollToSection('proj'); setMenuOpen(false); }} className="py-3 text-left hover:text-blue-600">Projects</button>
+                <button onClick={() => { scrollToSection('certs'); setMenuOpen(false); }} className="py-3 text-left hover:text-blue-600">Certifications</button>
+              </div>
+            </div>
+          )}
         </nav>
 
         <HeroSection text={text} />
@@ -122,8 +141,8 @@ export default function Portfolio() {
         <Footer scrollToSection={scrollToSection} />
 
         {scroll && (
-          <button onClick={() => scrollToSection('home')} className="fixed bottom-8 right-8 w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center z-50 hover:bg-blue-700 transition transform hover:scale-110">
-            <ArrowUp className="w-6 h-6" />
+          <button onClick={() => scrollToSection('home')} className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center z-50 hover:bg-blue-700 transition transform hover:scale-110">
+            <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         )}
       </div>
