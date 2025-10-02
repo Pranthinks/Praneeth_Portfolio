@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Linkedin, Github, Send } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 export function HeroSection({ text }) {
   return (
@@ -216,7 +217,7 @@ export function ProjectsSection() {
             <div className="p-8">
               <span className="text-gray-500 text-sm font-medium">— Project</span>
               <h3 className="text-2xl font-bold my-3 group-hover:text-indigo-500 transition-colors">CNN from Scratch</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">"Developed a custom CNN in PyTorch with 6 convolutional layers using 3×3 and 5×5 kernels for multi-scale feature extraction, along with batch normalization and dropout (0.8) for stability and regularization, achieving 90% test accuracy in classifying four Telugu cinema actors. Implemented a robust preprocessing pipeline with face detection, alignment, resizing, normalization, and tensor conversion, while optimizing training with Adam optimizer and cross-entropy loss for multi-class classification. The model was deployed as a Flask REST API and integrated with a React frontend to enable real-time inference, resulting in a production-ready, end-to-end full-stack application that seamlessly combines computer vision, deep learning, and web technologies.</p>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Developed a custom CNN in PyTorch with 6 convolutional layers using 3×3 and 5×5 kernels for multi-scale feature extraction, along with batch normalization and dropout (0.8) for stability and regularization, achieving 90% test accuracy in classifying four Telugu cinema actors. Implemented a robust preprocessing pipeline with face detection, alignment, resizing, normalization, and tensor conversion, while optimizing training with Adam optimizer and cross-entropy loss for multi-class classification. The model was deployed as a Flask REST API and integrated with a React frontend to enable real-time inference, resulting in a production-ready, end-to-end full-stack application that seamlessly combines computer vision, deep learning, and web technologies.</p>
               
               <a href="https://github.com/Pranthinks/CNN_Imageclassifier" target="_blank" rel="noopener noreferrer">
               <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
@@ -469,9 +470,9 @@ export function ContactSection() {
               <span>Code Repository</span>
             </a>
             <a href="https://leetcode.com/u/Praneeth_Sai/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition cursor-pointer">
-              <Github className="w-6 h-6 text-blue-600" />
-              <span>Leetcode Profile</span>
-            </a>
+  <Code2 className="w-6 h-6 text-blue-600" />
+  <span>Leetcode Profile</span>
+</a>
           </div>
         </div>
         
