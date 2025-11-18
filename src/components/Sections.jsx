@@ -110,7 +110,7 @@ export function ExperienceSection() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gray-200 dark:bg-gray-800 p-8 rounded-3xl shadow-lg transform transition hover:scale-105 hover:shadow-2xl">
             <div className="w-20 h-20 bg-blue-600 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-600/30">
-              <span className="text-white font-bold text-3xl">G</span>
+              <span className="text-white font-bold text-3xl">U</span>
             </div>
             <h3 className="text-xl font-bold mb-1">UAB</h3>
             <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Research Assistant</p>
