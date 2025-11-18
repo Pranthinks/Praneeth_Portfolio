@@ -75,7 +75,7 @@ export function StrengthsSection() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold mb-4">Software Engineering and Machine Learning</h3>
-            <p className="text-gray-600 dark:text-gray-300">I am passionate about building robust software and machine learning systems, with hands-on experience in developing full-stack applications, RESTful APIs, and end-to-end ML pipelines. From designing LLM platforms and RAG pipelines to creating CNN-based computer vision systems, I love solving challenging problems and optimizing algorithms for performance and scalability. My expertise spans Python, PyTorch, TensorFlow, scikit-learn, Django, Flask, FastAPI, and advanced data structures and algorithms, enabling me to deliver practical, high-quality solutions. I am excited to explore new ML and deep learning techniques while applying strong software engineering principles to create impactful systems.</p>
+            <p className="text-gray-600 dark:text-gray-300">I am passionate about building robust software and machine learning systems, with expertise in full-stack development, RESTful APIs, and end-to-end ML pipelines. I specialize in LLM fine-tuning, training optimization, and inference acceleration, including custom CUDA kernels for performance-critical workloads. From RAG pipelines to CNN-based computer vision systems, I leverage Python, PyTorch, TensorFlow, Django, Flask, and FastAPI to deliver scalable, high-quality solutions that combine strong software engineering with cutting-edge ML techniques.</p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-10 border-4 border-black dark:border-white transform transition hover:scale-105 hover:shadow-2xl">
             <div className="w-16 h-16 bg-blue-600 mb-6 flex items-center justify-center">
@@ -110,16 +110,30 @@ export function ExperienceSection() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gray-200 dark:bg-gray-800 p-8 rounded-3xl shadow-lg transform transition hover:scale-105 hover:shadow-2xl">
             <div className="w-20 h-20 bg-blue-600 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-600/30">
+              <span className="text-white font-bold text-3xl">G</span>
+            </div>
+            <h3 className="text-xl font-bold mb-1">UAB</h3>
+            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Research Assistant</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Sep 2025 - Present • USA</p>
+            <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Architected and developed NeuroStage, an AI-powered neuroimaging platform with modular Python design to streamline brain MRI preprocessing and quality validation.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Integrated multiple LLMs (GPT, Claude, Gemini) for automated DICOM metadata extraction and classification, benchmarking model performance to identify optimal solutions for production deployment with 92% accuracy. </span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Built intelligent agentic workflows that automatically convert, classify, and validate brain imaging data through multistage pipelines, reducing manual analysis time by 80% while maintaining research-grade quality standards.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Partnered with radiologists and researchers to define AI features, translate clinical needs into technical specs, and deliver intuitive, data-driven user experiences (manuscript in preparation).</span></li>
+            </ul>
+          </div>
+          <div className="bg-gray-200 dark:bg-gray-800 p-8 rounded-3xl shadow-lg transform transition hover:scale-105 hover:shadow-2xl">
+            <div className="w-20 h-20 bg-blue-600 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-600/30">
               <span className="text-white font-bold text-3xl">L</span>
             </div>
             <h3 className="text-xl font-bold mb-1">LifeSizeAgent.ai</h3>
-            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">AI Intern Advisor</p>
+            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">AI/ML Intern</p>
             <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Mar 2025 - Sep 2025 • Remote, USA</p>
             <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Designed and implemented scalable backend systems to support AI-driven applications and multi-agent workflows.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Developed interactive 3D avatar interfaces and integrated them into user-facing platforms to enhance engagement.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Built and optimized pipelines for AI knowledge retrieval and reasoning, improving system efficiency and response times.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Collaborated with cross-functional teams to deploy and refine AI solutions, ensuring alignment with product goals and user experience.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Designed and deployed generative AI technologies including multimodal LLM agents using LangChain, implementing autonomous reasoning systems for production applications serving 100K+ daily interactions.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Developed large-scale ML training pipelines using PyTorch with distributed training across GPU clusters, implementing memory-efficient strategies and mixed-precision optimization for sub-200ms inference.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Conducted experimentation with foundation model architectures, implementing post-training techniques including fine-tuning, alignment, and distillation for domain-specific applications.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Built scalable data processing infrastructure with automated ETL pipelines, implementing data curation and quality validation for training generative AI models at scale.</span></li>
             </ul>
           </div>
           
@@ -128,30 +142,17 @@ export function ExperienceSection() {
               <span className="text-white font-bold text-3xl">K</span>
             </div>
             <h3 className="text-xl font-bold mb-1">KaarTech Solutions</h3>
-            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Software Engineer - ML</p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Jan 2023 - Dec 2023 • India</p>
+            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Machine Learning Engineer - ML</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Jan 2022 - Dec 2023 • India</p>
             <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Designed and delivered end-to-end software and machine learning solutions that enhanced product functionality, personalization, and user engagement, achieving up to 75% improvement in key metrics.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Developed scalable and efficient pipelines for AI/ML workflows and system processes, reducing end-to-end response times by over 60% while ensuring high reliability at scale.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Collaborated closely with cross-functional teams to integrate ML solutions into production, translating complex technical insights into actionable business outcomes and measurable system impact.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Built distributed training infrastructure for 7B+ parameter models using DeepSpeed ZeRO-3 across 32-GPU clusters, achieving 88% scaling efficiency and 4.2x training speedup.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Optimized models for production through INT8 quantization, 60% pruning, and knowledge distillation, achieving 5.8x inference speedup while serving 50M+ daily predictions with less than 1% accuracy loss.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Developed custom CUDA/Triton kernels for efficient attention mechanisms, enabling 16K context windows with 70% memory reduction and 3.2x throughput in production pipelines. Implemented MLOps platform with automated CI/CD, experiment tracking, and A/B testing for 25+ production models, reducing deployment cycles from 2 weeks to 18 hours.</span></li>
+              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Productionized research models through distributed training optimizations and performance profiling, reducing infrastructure costs by 65% while maintaining model quality and research velocity.</span></li>
             </ul>
           </div>
           
-          <div className="bg-gray-200 dark:bg-gray-800 p-8 rounded-3xl shadow-lg transform transition hover:scale-105 hover:shadow-2xl">
-            <div className="w-20 h-20 bg-blue-600 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-600/30">
-              <span className="text-white font-bold text-3xl">G</span>
-            </div>
-            <h3 className="text-xl font-bold mb-1">GVPCE</h3>
-            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Research Assistant</p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">June 2022 - Nov 2022 • India</p>
-            <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Designed CNN-based feature extraction pipelines for image and video data, supporting automated attendance and recognition 
-systems.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Leveraged transfer learning (ResNet, EfficientNet) and optimization techniques (pruning, quantization, TensorRT) to enable 
-real-time inference on large video datasets.</span></li>
-              <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Applied advanced preprocessing to handle noisy or incomplete data, ensuring robust feature extraction under varying conditions.</span></li>
-            </ul>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -210,16 +211,16 @@ export function ProjectsSection() {
           <div className="bg-gray-50 dark:bg-gray-900 overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 group">
             <div className="h-64 bg-gradient-to-br from-neutral-800 via-stone-700 to-gray-900 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-20 transition-opacity"></div>
-              <span className="text-white text-2xl font-bold z-10 group-hover:scale-110 transition-transform">Custom CNN</span>
+              <span className="text-white text-2xl font-bold z-10 group-hover:scale-110 transition-transform">Transformer Enc - Dec</span>
               <div className="absolute top-4 left-4 w-12 h-12 bg-indigo-500 opacity-20 rounded-full animate-pulse group-hover:scale-150 transition-transform"></div>
               <div className="absolute bottom-4 right-4 w-24 h-1 bg-indigo-400 opacity-40 group-hover:w-32 transition-all"></div>
             </div>
             <div className="p-8">
               <span className="text-gray-500 text-sm font-medium">— Project</span>
-              <h3 className="text-2xl font-bold my-3 group-hover:text-indigo-500 transition-colors">CNN from Scratch</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Developed a custom CNN in PyTorch with 6 convolutional layers using 3×3 and 5×5 kernels for multi-scale feature extraction, along with batch normalization and dropout (0.8) for stability and regularization, achieving 90% test accuracy in classifying four Telugu cinema actors. Implemented a robust preprocessing pipeline with face detection, alignment, resizing, normalization, and tensor conversion, while optimizing training with Adam optimizer and cross-entropy loss for multi-class classification. The model was deployed as a Flask REST API and integrated with a React frontend to enable real-time inference, resulting in a production-ready, end-to-end full-stack application that seamlessly combines computer vision, deep learning, and web technologies.</p>
+              <h3 className="text-2xl font-bold my-3 group-hover:text-indigo-500 transition-colors">Transformer-Based Neural Machine Translation</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Built a complete Transformer encoder-decoder architecture from scratch in PyTorch for English-to-German translation, implementing multi-head attention, causal masking, positional encoding, and layer normalization. The 3-layer model with 8 attention heads and ~10M parameters was trained on the Multi30k dataset using mixed precision (FP16), gradient clipping, AdamW optimization, and LR scheduling for efficient convergence. I implemented both greedy decoding and beam search strategies, achieving grammatically correct translations. Additionally, I fine-tuned T5-Small for comparison, analyzing BLEU scores and optimizing decoder KV-cache utilization, which reinforced my understanding of attention mechanisms, inference optimization, and the trade-offs between different decoding approaches.</p>
               
-              <a href="https://github.com/Pranthinks/CNN_Imageclassifier" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Pranthinks/Machine_Translation-Eng-to-German-" target="_blank" rel="noopener noreferrer">
               <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -254,16 +255,16 @@ export function ProjectsSection() {
           <div className="bg-gray-50 dark:bg-gray-900 overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 group">
             <div className="h-64 bg-gradient-to-br from-zinc-900 via-neutral-800 to-stone-900 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-20 transition-opacity"></div>
-              <span className="text-white text-2xl font-bold z-10 group-hover:scale-110 transition-transform">Contact Book</span>
+              <span className="text-white text-2xl font-bold z-10 group-hover:scale-110 transition-transform">Multi Agent</span>
               <div className="absolute bottom-4 left-4 w-12 h-12 bg-zinc-500 opacity-20 rounded-full animate-pulse group-hover:scale-150 transition-transform"></div>
               <div className="absolute top-4 right-4 w-20 h-20 border-2 border-zinc-400 opacity-30 rounded-full group-hover:scale-125 transition-transform"></div>
             </div>
             <div className="p-8">
               <span className="text-gray-500 text-sm font-medium">— Project</span>
-              <h3 className="text-2xl font-bold my-3 group-hover:text-zinc-600 transition-colors">Contact Management System</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">I developed a Contact Management System using Python that leverages singly linked lists for efficient data storage, retrieval, and manipulation of contact information. The system supports dynamic insertion, iteration, searching, and modification of contacts with attributes like name, phone number, and relationship type. Core operations are implemented using custom Node and LinkedList classes, enabling O(n) traversal and search efficiency while maintaining flexible, memory-efficient data structures. Advanced features include conditional search, containment checks, and selective attribute modification, making it ideal for highly dynamic datasets. The project demonstrates strong fundamentals in data structures and algorithms (DSA), emphasizing modularity, encapsulation, and object-oriented programming (OOP) principles. It provides a foundation for scalable contact management applications and can be extended to integrate with databases or cloud storage for persistent storage and enterprise-level deployments.</p>
+              <h3 className="text-2xl font-bold my-3 group-hover:text-zinc-600 transition-colors">Multi-Agent AI Music Generation System</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Developed an autonomous AI music generation system using a multi-agent architecture with LangChain and Google Gemini 2.0. The system features three specialized agents: a Music Agent that generates mood-based AI music using HuggingFace's ACE-Step API, a Billing Agent that manages subscription payments and customer tracking via JSON database, and a Marketing Agent that creates preview samples and posts to social media platforms. I built a Flask web interface for real-time interaction and implemented a scheduler for fully autonomous operation, handling daily music generation, social media marketing, and monthly billing cycles. The system uses LLM-based prompt classification to intelligently route requests to appropriate agents, demonstrating practical multi-agent orchestration and automated business workflows.</p>
  
-              <a href="https://github.com/Pranthinks/Contact_book" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Pranthinks/Multi-Agent-Music-Generation-System" target="_blank" rel="noopener noreferrer">
               <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -274,18 +275,18 @@ export function ProjectsSection() {
           </div>
 
           <div className="bg-gray-50 dark:bg-gray-900 overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 group">
-            <div className="h-64 bg-gradient-to-br from-slate-900 via-gray-800 to-neutral-900 flex items-center justify-center relative overflow-hidden">
+            <div className="h-64 bg-gradient-to-br from-neutral-800 via-stone-700 to-gray-900 flex items-center justify-center relative overflow-hidden">
               <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-20 transition-opacity"></div>
-              <span className="text-white text-2xl font-bold z-10 group-hover:scale-110 transition-transform">PyTorch Playground</span>
-              <div className="absolute top-4 left-4 w-12 h-12 bg-slate-500 opacity-20 rounded-full animate-pulse group-hover:scale-150 transition-transform"></div>
-              <div className="absolute bottom-4 right-4 w-24 h-1 bg-slate-400 opacity-40 group-hover:w-32 transition-all"></div>
+              <span className="text-white text-2xl font-bold z-10 group-hover:scale-110 transition-transform">Custom CNN</span>
+              <div className="absolute top-4 left-4 w-12 h-12 bg-indigo-500 opacity-20 rounded-full animate-pulse group-hover:scale-150 transition-transform"></div>
+              <div className="absolute bottom-4 right-4 w-24 h-1 bg-indigo-400 opacity-40 group-hover:w-32 transition-all"></div>
             </div>
             <div className="p-8">
               <span className="text-gray-500 text-sm font-medium">— Project</span>
-              <h3 className="text-2xl font-bold my-3 group-hover:text-slate-600 transition-colors">Neural Networks & Problem Solving</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">I am building a beginner-friendly PyTorch repository featuring custom implementations of key neural network components such as activation functions (ReLU, GELU), convolutional layers, dropout, and batch normalization, with clear explanations of their roles in training stability, regularization, and non-linear learning. Alongside, I have a strong algorithmic foundation demonstrated through my LeetCode journey, having solved 420+ problems in Python and SQL across linked lists, trees, graphs, dynamic programming, backtracking, sliding window techniques, and more, building a robust problem-solving mindset. This project bridges practical deep learning implementation with algorithmic thinking, providing a comprehensive, hands-on guide for beginners to learn PyTorch while understanding core computational concepts, and emphasizes modular, reproducible, and well-documented Python code.</p>
+              <h3 className="text-2xl font-bold my-3 group-hover:text-indigo-500 transition-colors">CNN from Scratch</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Developed a custom CNN in PyTorch with 6 convolutional layers using 3×3 and 5×5 kernels for multi-scale feature extraction, along with batch normalization and dropout (0.8) for stability and regularization, achieving 90% test accuracy in classifying four Telugu cinema actors. Implemented a robust preprocessing pipeline with face detection, alignment, resizing, normalization, and tensor conversion, while optimizing training with Adam optimizer and cross-entropy loss for multi-class classification. The model was deployed as a Flask REST API and integrated with a React frontend to enable real-time inference, resulting in a production-ready, end-to-end full-stack application that seamlessly combines computer vision, deep learning, and web technologies.</p>
               
-              <a href="https://github.com/Pranthinks/Pytorch_CodingQuestions" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Pranthinks/CNN_Imageclassifier" target="_blank" rel="noopener noreferrer">
               <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
