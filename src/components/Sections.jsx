@@ -143,7 +143,7 @@ export function ExperienceSection() {
             </div>
             <h3 className="text-xl font-bold mb-1">KaarTech Solutions</h3>
             <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Machine Learning Engineer - ML</p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Jan 2022 - Dec 2023 • India</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Dec 2022 - Dec 2023 • India</p>
             <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
               <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Built distributed training infrastructure for 7B+ parameter models using DeepSpeed ZeRO-3 across 32-GPU clusters, achieving 88% scaling efficiency and 4.2x training speedup.</span></li>
               <li className="flex items-start"><span className="text-blue-600 dark:text-blue-400 mr-2 mt-0.5">▸</span><span>Optimized models for production through INT8 quantization, 60% pruning, and knowledge distillation, achieving 5.8x inference speedup while serving 50M+ daily predictions with less than 1% accuracy loss.</span></li>
