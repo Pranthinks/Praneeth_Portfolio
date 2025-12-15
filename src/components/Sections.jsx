@@ -141,7 +141,7 @@ export function ExperienceSection() {
             <div className="w-20 h-20 bg-blue-600 rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-600/30">
               <span className="text-white font-bold text-3xl">K</span>
             </div>
-            <h3 className="text-xl font-bold mb-1">KaarTech Solutions</h3>
+            <h3 className="text-xl font-bold mb-1">Kaar Infotech Solutions</h3>
             <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Machine Learning Engineer - ML</p>
             <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Dec 2022 - Dec 2023 • India</p>
             <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
