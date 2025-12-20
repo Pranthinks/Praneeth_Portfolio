@@ -12,6 +12,7 @@ export default function Portfolio() {
   const lines = [
     "I Have Experience in Python, MLOps, AWS and More",
     "Software and Machine Learning Engineer",
+    "AWS Certified Machine Learning Engineer",
     "Always Building, Always Creating, Always Learning.",
     "Problem Solver and Leetcoder!!!"
   ];

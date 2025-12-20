@@ -10,11 +10,11 @@ export function HeroSection({ text }) {
           <h1 className="text-7xl font-bold">Hi, I'm <span className="text-blue-600">Praneeth</span><br/>Sai Chunchu.</h1>
           <p className="text-2xl text-blue-600">{text}<span className="animate-pulse">|</span></p>
           <div className="w-20 h-1 bg-black dark:bg-white"></div>
-          <p className="text-xl font-bold">Machine Learning & MLOps Engineer,</p>
+          <p className="text-xl font-bold">Software Engineer(Machine Learning, NLP, MLOps)</p>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Software Engineer, with knowledge in Python, MLOps,<br/>
-            Machine Learning, Cloud, Data Analytics and<br/>
-            Production ML Systems.
+            Software Engineer specializing in Production ML,<br/>
+            LLMs, RAG, Agents & MLOps, Cloud<br/>
+            Data Analytics, Monitoring and SDLC.
           </p>
         </div>
         
@@ -75,7 +75,7 @@ export function StrengthsSection() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold mb-4">Software Engineering and Machine Learning</h3>
-            <p className="text-gray-600 dark:text-gray-300">I am passionate about building robust software and machine learning systems, with expertise in full-stack development, RESTful APIs, and end-to-end ML pipelines. I specialize in LLM fine-tuning, training optimization, and inference acceleration, including custom CUDA kernels for performance-critical workloads. From RAG pipelines to CNN-based computer vision systems, I leverage Python, PyTorch, TensorFlow, Django, Flask, and FastAPI to deliver scalable, high-quality solutions that combine strong software engineering with cutting-edge ML techniques.</p>
+            <p className="text-gray-600 dark:text-gray-300">I am passionate about building production-grade ML systems with expertise in MLOps, NLP engineering, and distributed infrastructure. I specialize in LLM fine-tuning (LoRA, QLoRA, RLHF), distributed training (DDP, FSDP), and inference acceleration through custom CUDA kernels and quantization. From RAG pipelines to transformer-based NLP and CNN architectures, I build end-to-end solutions spanning data engineering, model training, experiment tracking (MLflow, W&B), and Kubernetes deployment. Leveraging Python, PyTorch, TensorFlow, FastAPI, Docker, and Terraform on AWS/GCP, I deliver scalable ML microservices with CI/CD automation that combine rigorous software engineering with cutting-edge ML techniques.</p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-10 border-4 border-black dark:border-white transform transition hover:scale-105 hover:shadow-2xl">
             <div className="w-16 h-16 bg-blue-600 mb-6 flex items-center justify-center">
