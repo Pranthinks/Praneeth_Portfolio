@@ -41,7 +41,7 @@ export function AboutSection({ scrollToSection }) {
           <div className="grid md:grid-cols-2 gap-8 pt-6">
             <div>
               <h3 className="font-bold text-2xl mb-4">• My Skills Are:</h3>
-              <p className="text-lg text-gray-600 dark:text-gray-300">Python, PyTorch, TensorFlow, scikit-learn, MLflow, Docker, Kubernetes, AWS, FastAPI, Apache Airflow, and Production ML Systems.</p>
+              <p className="text-lg text-gray-600 dark:text-gray-300">PyTorch, TensorFlow,LLM's, RAG, Agents,MLflow, Docker, Kubernetes, AWS, Apache Airflow, and Production ML Systems.</p>
             </div>
             <div>
               <h3 className="font-bold text-2xl mb-4">• My Weaknesses Are:</h3>
