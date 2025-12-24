@@ -176,13 +176,27 @@ export function ProjectsSection() {
               <span className="text-gray-500 text-sm font-medium">— Project</span>
               <h3 className="text-2xl font-bold my-3 group-hover:text-blue-500 transition-colors">End-to-End MLOps Pipeline</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Designed and implemented a modular 6-stage MLOps pipeline orchestrated with Apache Airflow, covering end-to-end workflows from data ingestion and ETL to model training and production prediction. Integrated MLflow for comprehensive experiment tracking, automated hyperparameter optimization, model versioning, and registry management. Containerized the entire workflow using Docker and established CI/CD pipelines with GitHub Actions to ensure seamless deployment. Exposed and served trained models through FastAPI microservices, enabling scalable, low-latency inference. Implemented real-time monitoring of data quality, drift detection, and model performance metrics using Prometheus and Grafana dashboards, ensuring reliability and continuous improvement of deployed models.</p>
-              <a href="https://github.com/Pranthinks/Turbine_RUL_MLPipeline" target="_blank" rel="noopener noreferrer">
-              <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-              </a>
+              
+              <div className="flex gap-3">
+                <a href="https://github.com/Pranthinks/Turbine_RUL_MLPipeline" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 hover:opacity-80 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>Code</span>
+                  </button>
+                </a>
+                
+                <a href="https://www.linkedin.com/posts/contactpraneeth_machinelearning-datascience-artificialintelligence-activity-7363347391757840385-FV8R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-roHwB7q8THAgr894YsgkBlXtrQrDg54g" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-center gap-2 hover:opacity-90 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demo</span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
           
@@ -198,13 +212,26 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-bold my-3 group-hover:text-cyan-500 transition-colors">Attendance Management System</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Engineered a real-time, AI-powered attendance system leveraging Django for backend services, OpenCV with CNN/HOG-based face detection, and 128-D face embeddings for automated biometric check-ins. Containerized the application with Docker and deployed it on AWS EKS using Kubernetes and Terraform for scalable, cloud-native orchestration with Infrastructure as Code (IaC). Designed and automated a CI/CD pipeline to streamline code integration, infrastructure provisioning, and model updates. Built an end-to-end solution including face capture pipelines, secure authentication, and an interactive admin dashboard for real-time attendance analytics and reporting.</p>
     
-              <a href="https://github.com/Pranthinks/Attendance_Management_System" target="_blank" rel="noopener noreferrer">
-              <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-              </a>
+              <div className="flex gap-3">
+                <a href="https://github.com/Pranthinks/Attendance_Management_System" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 hover:opacity-80 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>Code</span>
+                  </button>
+                </a>
+                
+                <a href="https://www.linkedin.com/posts/contactpraneeth_techinnovation-python-django-activity-7220833915429662721-d_im?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-roHwB7q8THAgr894YsgkBlXtrQrDg54g" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-gradient-to-r from-cyan-600 to-blue-600 text-white flex items-center justify-center gap-2 hover:opacity-90 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demo</span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
           
@@ -220,13 +247,26 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-bold my-3 group-hover:text-indigo-500 transition-colors">Transformer-Based Neural Machine Translation</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Built a complete Transformer encoder-decoder architecture from scratch in PyTorch for English-to-German translation, implementing multi-head attention, causal masking, positional encoding, and layer normalization. The 3-layer model with 8 attention heads and ~10M parameters was trained on the Multi30k dataset using mixed precision (FP16), gradient clipping, AdamW optimization, and LR scheduling for efficient convergence. I implemented both greedy decoding and beam search strategies, achieving grammatically correct translations. Additionally, I fine-tuned T5-Small for comparison, analyzing BLEU scores and optimizing decoder KV-cache utilization, which reinforced my understanding of attention mechanisms, inference optimization, and the trade-offs between different decoding approaches.</p>
               
-              <a href="https://github.com/Pranthinks/Machine_Translation-Eng-to-German-" target="_blank" rel="noopener noreferrer">
-              <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-              </a>
+              <div className="flex gap-3">
+                <a href="https://github.com/Pranthinks/Machine_Translation-Eng-to-German-" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 hover:opacity-80 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>Code</span>
+                  </button>
+                </a>
+                
+                <a href="https://github.com/Pranthinks/Machine_Translation-Eng-to-German-/blob/main/Custom_Transformer.ipynb" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white flex items-center justify-center gap-2 hover:opacity-90 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demo</span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -242,13 +282,27 @@ export function ProjectsSection() {
               <span className="text-gray-500 text-sm font-medium">— Project</span>
               <h3 className="text-2xl font-bold my-3 group-hover:text-gray-600 transition-colors">AWS-Powered Predictive Analytics Pipeline for Engine Health Monitoring</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">I developed a production-grade, cloud-native MLOps pipeline for predicting the Remaining Useful Life (RUL) of turbofan engines on AWS Cloud. The system uses AWS Glue for scalable ETL pipelines, ingesting data from multiple APIs into S3. The six-stage workflow is orchestrated via SageMaker Pipelines, including drift detection, feature engineering with tsfresh, model training, and dynamic inference. Models are deployed as SageMaker Endpoints for real-time predictions, with observability enabled via CloudWatch metrics and alarms. Experiment tracking and model versioning are maintained with DagsHub MLflow, ensuring reproducibility. CI/CD is fully automated using CodePipeline, CodeBuild, and Dockerized ECR images. The architecture is secure, scalable, and optimized for high availability and performance in production environments.</p>
-              <a href="https://github.com/Pranthinks/AWS_Turbine_rul_pipeline" target="_blank" rel="noopener noreferrer">
-              <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-              </a>
+              
+              <div className="flex gap-3">
+                <a href="https://github.com/Pranthinks/AWS_Turbine_rul_pipeline" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 hover:opacity-80 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>Code</span>
+                  </button>
+                </a>
+                
+                <a href="https://www.linkedin.com/posts/contactpraneeth_mlops-aws-machinelearning-activity-7378209279398346753-gO85?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-roHwB7q8THAgr894YsgkBlXtrQrDg54g" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-gradient-to-r from-gray-600 to-slate-600 text-white flex items-center justify-center gap-2 hover:opacity-90 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demo</span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -264,13 +318,26 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-bold my-3 group-hover:text-zinc-600 transition-colors">Multi-Agent AI Music Generation System</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Developed an autonomous AI music generation system using a multi-agent architecture with LangChain and Google Gemini 2.0. The system features three specialized agents: a Music Agent that generates mood-based AI music using HuggingFace's ACE-Step API, a Billing Agent that manages subscription payments and customer tracking via JSON database, and a Marketing Agent that creates preview samples and posts to social media platforms. I built a Flask web interface for real-time interaction and implemented a scheduler for fully autonomous operation, handling daily music generation, social media marketing, and monthly billing cycles. The system uses LLM-based prompt classification to intelligently route requests to appropriate agents, demonstrating practical multi-agent orchestration and automated business workflows.</p>
  
-              <a href="https://github.com/Pranthinks/Multi-Agent-Music-Generation-System" target="_blank" rel="noopener noreferrer">
-              <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-              </a>
+              <div className="flex gap-3">
+                <a href="https://github.com/Pranthinks/Multi-Agent-Music-Generation-System" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 hover:opacity-80 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>Code</span>
+                  </button>
+                </a>
+                
+                <a href="https://drive.google.com/file/d/1Xfq7AaERCLtEiFXYiQbvjRoKISylY3Ca/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-gradient-to-r from-zinc-600 to-stone-600 text-white flex items-center justify-center gap-2 hover:opacity-90 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demo</span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -286,13 +353,26 @@ export function ProjectsSection() {
               <h3 className="text-2xl font-bold my-3 group-hover:text-indigo-500 transition-colors">CNN from Scratch</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">Developed a custom CNN in PyTorch with 6 convolutional layers using 3×3 and 5×5 kernels for multi-scale feature extraction, along with batch normalization and dropout (0.8) for stability and regularization, achieving 90% test accuracy in classifying four Telugu cinema actors. Implemented a robust preprocessing pipeline with face detection, alignment, resizing, normalization, and tensor conversion, while optimizing training with Adam optimizer and cross-entropy loss for multi-class classification. The model was deployed as a Flask REST API and integrated with a React frontend to enable real-time inference, resulting in a production-ready, end-to-end full-stack application that seamlessly combines computer vision, deep learning, and web technologies.</p>
               
-              <a href="https://github.com/Pranthinks/CNN_Imageclassifier" target="_blank" rel="noopener noreferrer">
-              <button className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center hover:opacity-80 transition group-hover:scale-110">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
-              </a>
+              <div className="flex gap-3">
+                <a href="https://github.com/Pranthinks/CNN_Imageclassifier" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-black dark:bg-white text-white dark:text-black flex items-center justify-center gap-2 hover:opacity-80 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>Code</span>
+                  </button>
+                </a>
+                
+                <a href="https://www.linkedin.com/posts/contactpraneeth_machinelearning-deeplearning-pytorch-activity-7304221621181927424-HHO5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE-roHwB7q8THAgr894YsgkBlXtrQrDg54g" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <button className="w-full h-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white flex items-center justify-center gap-2 hover:opacity-90 transition group-hover:scale-105 font-semibold rounded-lg">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demo</span>
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
