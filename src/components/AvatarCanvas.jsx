@@ -81,13 +81,13 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
 
     try {
       // Load visemes
-      const res = await fetch('/Visemes.json');
+      const res = await fetch('/visemes.json');
       const data = await res.json();
       visemesRef.current = data.mouthCues || [];
       console.log("Loaded visemes:", visemesRef.current.length);
 
       // Play audio
-      audioRef.current = new Audio('/Introduction.wav');
+      audioRef.current = new Audio('/introduction.wav');
       audioRef.current.onended = () => {
         console.log("Introduction finished");
         resetMouth();
