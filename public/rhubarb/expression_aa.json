@@ -1,0 +1,8 @@
+{
+  "Wolf3D_Head": {
+    "mouthDimpleLeft": 0.5,
+    "mouthDimpleRight": 0.5,
+    "jawOpen": 0.3,
+    "viseme_aa": 0.4
+  }
+}

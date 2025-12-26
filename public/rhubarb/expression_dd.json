@@ -1,0 +1,13 @@
+{
+  "Wolf3D_Head": {
+    "viseme_I": 0.6,
+    "browInnerUp": 0.15,
+    "mouthFrownLeft": 0.3,
+    "mouthFrownRight": 0.3,
+    "mouthLowerDownLeft": 0.2,
+    "mouthLowerDownRight": 0.2,
+    "jawOpen": 0.2,
+    "mouthSmileLeft": 0.35,
+    "mouthSmileRight": 0.35
+  }
+}
