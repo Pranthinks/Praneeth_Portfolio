@@ -660,7 +660,7 @@ export function Footer({ scrollToSection }) {
 
   React.useEffect(() => {
     // Fetch and increment visitor count with new counter key
-    fetch('https://api.counterapi.dev/v1/pranthinks-portfolio-react/visits/up')
+    fetch('https://api.counterapi.dev/v1/pranthinks-portfolio-react/portfolio-visits/up')
       .then(response => response.json())
       .then(data => {
         setVisitorCount(data.count);
