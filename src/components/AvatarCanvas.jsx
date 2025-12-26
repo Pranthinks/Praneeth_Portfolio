@@ -48,20 +48,28 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
   useEffect(() => {
     const fbxLoader = new FBXLoader();
 
-    fbxLoader.load("/animations/Talking.fbx", (anim) => {
-      if (gltf.scene && anim.animations[0]) {
-        mixer.current = new THREE.AnimationMixer(gltf.scene);
-        const action = mixer.current.clipAction(anim.animations[0]);
-        action.loop = THREE.LoopRepeat;
-        action.play();
-        console.log("Idle animation loaded");
+    fbxLoader.load(
+      "/animations/Talking.fbx", 
+      (anim) => {
+        if (gltf.scene && anim.animations[0]) {
+          mixer.current = new THREE.AnimationMixer(gltf.scene);
+          const action = mixer.current.clipAction(anim.animations[0]);
+          action.loop = THREE.LoopRepeat;
+          action.play();
+          console.log("✓ Idle animation loaded");
+        }
+      },
+      undefined,
+      (error) => {
+        console.error("❌ Failed to load animation:", error);
       }
-    });
+    );
 
     return () => {
       if (mixer.current) mixer.current.stopAllAction();
       if (audioRef.current) {
         audioRef.current.pause();
+        audioRef.current.currentTime = 0;
         audioRef.current = null;
       }
     };
@@ -80,28 +88,84 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
     hasPlayedIntro.current = true;
 
     try {
+      console.log("🎬 Starting introduction...");
+      
       // Load visemes
-      const res = await fetch('/visemes.json');
-      const data = await res.json();
+      const visemesResponse = await fetch('/visemes.json');
+      if (!visemesResponse.ok) {
+        throw new Error(`Failed to load visemes.json: ${visemesResponse.status}`);
+      }
+      const data = await visemesResponse.json();
       visemesRef.current = data.mouthCues || [];
-      console.log("Loaded visemes:", visemesRef.current.length);
+      console.log("✓ Loaded visemes:", visemesRef.current.length);
 
-      // Play audio
+      // Create and configure audio
       audioRef.current = new Audio('/introduction.wav');
+      
+      // Important audio settings for production
+      audioRef.current.preload = 'auto';
+      audioRef.current.crossOrigin = 'anonymous';
+      
+      // Audio event listeners
+      audioRef.current.addEventListener('loadeddata', () => {
+        console.log("✓ Audio file loaded");
+      });
+      
+      audioRef.current.addEventListener('canplay', () => {
+        console.log("✓ Audio ready to play");
+      });
+      
+      audioRef.current.addEventListener('playing', () => {
+        console.log("▶️ Audio playing");
+      });
+      
+      audioRef.current.addEventListener('error', (e) => {
+        console.error("❌ Audio error:", audioRef.current.error);
+        if (audioRef.current.error) {
+          console.error("Error code:", audioRef.current.error.code);
+          console.error("Error message:", audioRef.current.error.message);
+        }
+      });
+      
       audioRef.current.onended = () => {
-        console.log("Introduction finished");
+        console.log("✓ Introduction finished");
         resetMouth();
         currentPhoneme.current = null;
       };
       
-      await audioRef.current.play();
-      console.log("Playing introduction");
+      // Load audio first
+      audioRef.current.load();
+      
+      // Small delay to ensure audio is loaded
+      await new Promise(resolve => setTimeout(resolve, 200));
+      
+      // Attempt to play
+      try {
+        const playPromise = audioRef.current.play();
+        
+        if (playPromise !== undefined) {
+          await playPromise;
+          console.log("✓ Audio playback started successfully");
+        }
+      } catch (playError) {
+        console.error("❌ Playback error:", playError.name);
+        console.error("Message:", playError.message);
+        
+        // Retry once after short delay
+        await new Promise(resolve => setTimeout(resolve, 300));
+        try {
+          await audioRef.current.play();
+          console.log("✓ Audio playback started on retry");
+        } catch (retryError) {
+          console.error("❌ Retry failed:", retryError);
+        }
+      }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("❌ Error in playIntro:", error);
     }
   };
 
-  // Apply mouth shape - FIXED to handle mesh name mismatch
+  // Apply mouth shape
   const applyMouthShape = async (phoneme) => {
     const file = visemeMap[phoneme];
     if (!file) {
@@ -114,11 +178,10 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
       try {
         const res = await fetch(`/rhubarb/${file}`);
         if (!res.ok) {
-          console.error(`Failed to fetch ${file}`);
+          console.error(`Failed to fetch ${file}: ${res.status}`);
           return;
         }
         expressionCache.current[phoneme] = await res.json();
-        console.log(`Loaded expression for ${phoneme}`);
       } catch (error) {
         console.error(`Failed to load ${phoneme}:`, error);
         return;
@@ -127,16 +190,16 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
 
     const expression = expressionCache.current[phoneme];
     
-    // FIX: Apply to all meshes regardless of expression mesh name
+    // Apply to all meshes
     let appliedCount = 0;
     morphMeshes.current.forEach(mesh => {
       if (!mesh.morphTargetDictionary || !mesh.morphTargetInfluences) return;
       
-      // Get morph data - try all keys in the expression file
+      // Get morph data from expression file
       let morphData = null;
       for (const key of Object.keys(expression)) {
         morphData = expression[key];
-        break; // Use the first (and usually only) mesh data
+        break;
       }
       
       if (morphData) {
@@ -149,12 +212,6 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
         });
       }
     });
-    
-    if (appliedCount === 0) {
-      console.warn(`No morphs applied for ${phoneme} - check if morph target names match`);
-    } else {
-      console.log(`✓ Applied ${appliedCount} morphs for ${phoneme}`);
-    }
   };
 
   // Reset mouth
@@ -265,6 +322,7 @@ function AvatarCanvas() {
   }, []);
 
   const handleStartClick = () => {
+    console.log("🎯 Start button clicked");
     setPlayIntro(true);
     setShowButton(false);
   };
