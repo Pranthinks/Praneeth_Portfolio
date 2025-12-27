@@ -12,6 +12,8 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
   // Animation
   const mixer = useRef(null);
   const hasPlayedIntro = useRef(false);
+  const talkingAction = useRef(null);
+  const idleAction = useRef(null);
   
   // Lip sync
   const audioRef = useRef(null);
@@ -44,16 +46,28 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
     }
   }, [gltf]);
 
-  // Load idle animation only
+  // Load both animations
   useEffect(() => {
     const fbxLoader = new FBXLoader();
 
+    if (!gltf.scene) return;
+    mixer.current = new THREE.AnimationMixer(gltf.scene);
+
+    // Load Talking animation (starts playing)
     fbxLoader.load("/animations/Talking.fbx", (anim) => {
-      if (gltf.scene && anim.animations[0]) {
-        mixer.current = new THREE.AnimationMixer(gltf.scene);
-        const action = mixer.current.clipAction(anim.animations[0]);
-        action.loop = THREE.LoopRepeat;
-        action.play();
+      if (anim.animations[0]) {
+        talkingAction.current = mixer.current.clipAction(anim.animations[0]);
+        talkingAction.current.loop = THREE.LoopRepeat;
+        talkingAction.current.play();
+        console.log("Talking animation loaded");
+      }
+    });
+
+    // Load Idle animation (ready but not playing)
+    fbxLoader.load("/animations/Idle.fbx", (anim) => {
+      if (anim.animations[0]) {
+        idleAction.current = mixer.current.clipAction(anim.animations[0]);
+        idleAction.current.loop = THREE.LoopRepeat;
         console.log("Idle animation loaded");
       }
     });
@@ -92,6 +106,13 @@ function AvatarModel({ modelPath, shouldPlayIntro }) {
         console.log("Introduction finished");
         resetMouth();
         currentPhoneme.current = null;
+        
+        // Switch to Idle animation after speech ends
+        if (talkingAction.current && idleAction.current) {
+          talkingAction.current.fadeOut(0.5);
+          idleAction.current.reset().fadeIn(0.5).play();
+          console.log("Switched to Idle animation");
+        }
       };
       
       await audioRef.current.play();
@@ -313,9 +334,6 @@ function AvatarCanvas() {
         </div>
       )}
       
-      <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-black/60 text-white px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold backdrop-blur-sm">
-        🎮 Interactive 3D
-      </div>
       
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 sm:bottom-4 bg-black/60 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs backdrop-blur-sm">
         <span className="hidden sm:inline">Drag to rotate • Scroll to zoom</span>
