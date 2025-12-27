@@ -335,10 +335,7 @@ function AvatarCanvas() {
       )}
       
       
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 sm:bottom-4 bg-black/60 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs backdrop-blur-sm">
-        <span className="hidden sm:inline">Drag to rotate • Scroll to zoom</span>
-        <span className="sm:hidden">Drag • Pinch</span>
-      </div>
+      
     </div>
   );
 }
